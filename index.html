@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KitabDhundo - Author Finder</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="container">
+    <h1>KitabDhundo</h1>
+    
+    <!-- Registration Section -->
+    <div id="registration-section" class="registration-section">
+      <h2>Register</h2>
+      <form id="registration-form">
+        <input type="text" id="username" placeholder="Enter your name" required>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <input type="password" id="password" placeholder="Enter your password" required>
+        <button type="submit">Register</button>
+      </form>
+      <p>Already have an account? <a href="#" onclick="toggleRegistration()">Login here</a></p>
+    </div>
+
+    <!-- Mode Selection Page -->
+    <div id="mode-selection-page" class="mode-selection-page" style="display: none;">
+      <button onclick="openSearchPage('indian')">Find Indian Author</button>
+      <button onclick="openSearchPage('foreign')">Find Foreign Author</button>
+    </div>
+
+    <!-- Author Search Section -->
+    <div id="search-section" class="search-section" style="display: none;">
+      <div>
+        <input type="text" id="search-input" placeholder="Search for an author">
+        <button onclick="searchAuthor()">Search</button>
+      </div>
+
+      <div id="result-section">
+        <h2>Author and their Famous Work:</h2>
+        <p id="result">Please select a mode and search for an author.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
